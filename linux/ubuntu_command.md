@@ -8,6 +8,8 @@ tar –czf jpg.tar.gz *.jpg
 tar -xzvf file.tar.gz //解压tar.gz
 
 ## 配置防火墙
+
+```
 sudo ufw status
 sudo ufw enable
 sudo ufw disable
@@ -16,13 +18,17 @@ sudo ufw allow 53
 sudo ufw delete allow 53
 sudo ufw allow from 15.15.15.0/24  to any port 22
 sudo ufw delete allow from 15.15.15.0/24  to any port 22
+```
 
 ## 检查系统状态
+
+```
 vmstat
 htop，top
 iostat -x 1
 dstat
 sar
+```
 
 ## 统计代码行数，去除空行
 find . -name "*.py"|xargs cat|grep -v ^$|wc -l
@@ -50,6 +56,8 @@ mkfs -t ext4 -c /dev/sdb1
 sudo cp /etc/fstab /etc/fstab.$(date +%Y-%m-%d)
 
 ### 复制数据
+
+```
 rsync -avPHSX /var/lib/docker /new/partition/
 -a，档案模式。
 -v，显示详细信息。
@@ -57,6 +65,7 @@ rsync -avPHSX /var/lib/docker /new/partition/
 -H，处理Hardlink为Hardlink，关键！
 -S，稀疏文件优化处理。
 -X，保留所有属性。
+```
 
 ## 将某个文件映射到新磁盘上
 ### 修改fstab 在该文件中把下面一行添加到fstab里，将新位置挂载到 /var/lib/docker 
