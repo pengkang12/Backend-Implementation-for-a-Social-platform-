@@ -1,0 +1,36 @@
+```
+RABBITMQ_DEFAULT_USER=user
+ RABBITMQ_DEFAULT_PASS=password
+ RABBITMQ_DEFAULT_VHOST=my_vhost
+
+sudo rabbitmqctl add_user myuser mypassword
+sudo rabbitmqctl add_vhost myvhost
+sudo rabbitmqctl set_user_tags myuser mytag
+sudo rabbitmqctl set_permissions -p myvhost myuser ".*" ".*"
+```
+
+# start rabbitmq
+
+```
+sudo rabbitmq-server
+sudo rabbitmq-server -detached
+```
+
+# stop rabbitmq
+sudo rabbitmqctl stop
+
+
+# ubuntu
+
+```
+apt-get install -y erlang
+apt-get install rabbitmq-server
+
+systemctl enable rabbitmq-server
+systemctl start rabbitmq-server
+
+systemctl status rabbitmq-server
+```
+
+# reference
+https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html
