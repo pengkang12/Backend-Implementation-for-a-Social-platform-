@@ -11,6 +11,8 @@ operating system，Computer architecture，django，celery，postgres，rabbitmq
 python 后端开发
 技术框架：django，celery，django-rest-framework
 
+开发了完整的后端系统，包括测试与开发。并接入支付功能。
+
 ### 2018年2月～2018年7月
 
 app聊天后台设计
