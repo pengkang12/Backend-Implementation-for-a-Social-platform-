@@ -1,0 +1,23 @@
+Error
+
+Makefile.am:4: error: Libtool library used but 'LIBTOOL' is undefined
+Makefile.am:4:   The usual way to define 'LIBTOOL' is to add 'LT_INIT'
+Makefile.am:4:   to 'configure.ac' and run 'aclocal' and 'autoconf' again.
+Makefile.am:4:   If 'LT_INIT' is in 'configure.ac', make sure
+Makefile.am:4:   its definition is in aclocal's search path.
+Makefile:386: recipe for target 'Makefile.in' failed
+make: *** [Makefile.in] Error 1
+
+Viewopoint 1:
+didn't install aclocal
+
+Viewpoint 2:
+Install libtool
+
+If I install aclocal using my routine. Then I need to configure routine.
+
+aclocal --print-ac-dir
+check the DIR
+aclocal -I DIR
+
+Now, it works. 
