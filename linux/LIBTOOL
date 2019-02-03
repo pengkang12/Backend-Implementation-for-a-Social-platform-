@@ -1,3 +1,5 @@
+export PATH=/opt/aclocal-1.15/bin:$PATH
+
 Error
 
 Makefile.am:4: error: Libtool library used but 'LIBTOOL' is undefined
